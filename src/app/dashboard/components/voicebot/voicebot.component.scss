@@ -1,0 +1,88 @@
+
+@import "primeicons/primeicons.css";
+
+.container{
+    width: 12rem;
+    height: 13rem;
+    overflow: auto;
+    background-color:#28b6f4;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.close-icon{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.close-icon-cont{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bot-pic-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 5rem;
+        height: 7rem;
+        object-fit: fill;
+    }
+}
+
+.chat-cont{
+    width: 10rem;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
+    p{
+        margin: 0;
+        font-size: 10px;
+
+    }
+    
+}
+
+.mic-cont{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mic-icon{
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.mic-icon-enable{
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.container::-webkit-scrollbar-track {
+    display: none;
+  }
+  
+  .container:has(.horizontal-scroll)::-webkit-scrollbar {
+    display: none !important;
+  }
+  
+  .container::-webkit-scrollbar {
+   display: none;
+  }
+  
+  .container::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  
+  

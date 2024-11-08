@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="close-icon-cont">
+    <i class="pi pi-times close-icon" (click)="closeVoiceBotChat()"></i>
+  </div>
+
+  <div class="bot-pic-cont">
+    <img src="../../../../assets/chat-bot-full.png" alt="noImag" />
+  </div>
+
+  <div class="chat-cont">
+    <p>{{ message }}</p>
+  </div>
+
+  <div class="mic-cont">
+    <i
+      class="pi pi-microphone mic-icon"
+      *ngIf="!showMicIcon"
+      (click)="startListening()"
+    ></i>
+    <i
+      class="pi pi-microphone mic-icon-enable"
+      *ngIf="showMicIcon"
+      (click)="stopListening()"
+    ></i>
+  </div>
+</div>

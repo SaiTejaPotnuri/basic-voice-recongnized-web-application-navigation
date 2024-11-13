@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-home-dashboard',
@@ -11,7 +12,10 @@ export class HomeDashboardComponent {
   showVoiceBotChat: boolean = false;
   selectedLang: string = '';
 
-  constructor(private traslateService: TranslateService) {}
+  constructor(
+    private traslateService: TranslateService,
+    private languageService: LanguageService
+  ) {}
 
   ngOnInit() {
     this.selectedLang = localStorage.getItem('langInfo') || 'en';
@@ -28,6 +32,11 @@ export class HomeDashboardComponent {
     const lang = event.target.value;
     localStorage.setItem('langInfo', lang);
     this.traslateService.use(lang);
+    this.languageService.setLang(lang);
+  }
+
+  getLang() {
+    return this.languageService.getLang();
   }
 
   getTranslatedText(key: string) {

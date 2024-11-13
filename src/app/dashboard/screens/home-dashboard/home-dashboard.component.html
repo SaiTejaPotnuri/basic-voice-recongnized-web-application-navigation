@@ -34,15 +34,9 @@
 
         <div class="lang-cont">
           <select name="lang" (change)="onChangeLang($event)" id="lang">
-            <option [selected]="selectedLang === 'en'" value="en">
-              English
-            </option>
-            <option [selected]="selectedLang === 'fr'" value="fr">
-              French
-            </option>
-            <option [selected]="selectedLang === 'es'" value="es">
-              Spanish
-            </option>
+            <option [selected]="getLang() === 'en'" value="en">English</option>
+            <option [selected]="getLang() === 'fr'" value="fr">French</option>
+            <option [selected]="getLang() === 'es'" value="es">Spanish</option>
           </select>
         </div>
         <!-- <div id="google_translate_element"></div> -->

@@ -1,5 +1,7 @@
 import { Component, EventEmitter, NgZone, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-voicebot',
@@ -14,7 +16,12 @@ export class VoicebotComponent {
   isListening: boolean = false;
   transcript: string = '';
 
-  constructor(private zone: NgZone, private router: Router) {
+  constructor(
+    private zone: NgZone,
+    private router: Router,
+    private traslateService: TranslateService,
+    private languageService: LanguageService
+  ) {
     // Step 2.1: Check for browser support
     const SpeechRecognition =
       (window as any).SpeechRecognition ||
@@ -89,6 +96,37 @@ export class VoicebotComponent {
         this.speak('Navigating to seamless assist...');
         this.router.navigate(['/dashboard/seamless-assist']);
         this.message = 'Navigating to stack semless assist';
+        break;
+      case transcript.includes('language'):
+        switch (true) {
+          case transcript.includes('english'):
+            this.speak('Changing language to english...');
+            this.message = 'Changing language to english';
+            localStorage.setItem('langInfo', 'en');
+            this.traslateService.use('en');
+            this.languageService.setLang('en');
+            break;
+          case transcript.includes('spanish'):
+            this.speak('Changing language to spanish...');
+            this.message = 'Changing language to spanish';
+            localStorage.setItem('langInfo', 'es');
+            this.traslateService.use('es');
+            this.languageService.setLang('es');
+            break;
+          case transcript.includes('french'):
+            this.speak('Changing language to french...');
+            this.message = 'Changing language to french';
+            localStorage.setItem('langInfo', 'fr');
+            this.traslateService.use('fr');
+            this.languageService.setLang('fr');
+            break;
+          default:
+            this.speak('Unrecognized command changing to default language...');
+            this.message = 'Unrecognized command changing to default language';
+            localStorage.setItem('langInfo', 'en');
+            this.traslateService.use('en');
+            this.languageService.setLang('en');
+        }
         break;
       default:
         this.speak('Unrecognized command Moving to default page...');

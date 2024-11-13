@@ -9,9 +9,10 @@ import { SeamlessAssistComponent } from './components/seamless-assist/seamless-a
 import { StackEnableComponent } from './components/stack-enable/stack-enable.component';
 import { SharedModule } from '../shared/shared.module';
 import { VoicebotComponent } from './components/voicebot/voicebot.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [HomeDashboardComponent, DPEComponent, PGTComponent, SeamlessAssistComponent, StackEnableComponent, VoicebotComponent],
-  imports: [CommonModule, DashboardRoutingModule,SharedModule],
+  imports: [CommonModule, DashboardRoutingModule,SharedModule,TranslateModule],
 })
 export class DashboardModule {}

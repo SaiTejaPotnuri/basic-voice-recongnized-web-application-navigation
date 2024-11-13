@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {InputTextModule} from 'primeng/inputtext'
-import {ButtonModule} from 'primeng/button'
+import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
 import { PasswordModule } from 'primeng/password';
 import { TableModule } from 'primeng/table';
 import { AvatarModule } from 'primeng/avatar';
@@ -25,7 +25,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { OverlayModule } from 'primeng/overlay';
 import { TagModule } from 'primeng/tag';
 import { DividerModule } from 'primeng/divider';
-const primengComponents=[
+import { DropdownModule } from 'primeng/dropdown';
+
+const primengComponents = [
   CommonModule,
   InputTextModule,
   ButtonModule,
@@ -52,14 +54,12 @@ const primengComponents=[
   OverlayModule,
   TagModule,
   DividerModule,
-  
-]
+  DropdownModule,
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    primengComponents
-  ],
-  exports : [primengComponents]
+  imports: [primengComponents],
+  exports: [primengComponents],
 })
-export class PrimengModule { }
+export class PrimengModule {}

@@ -1,31 +1,68 @@
 <div class="main-container">
-    <div>
-        <p-sidebar [(visible)]="showNavBar" position="top" [styleClass]="'navStyle'" [showCloseIcon]="false" [closeOnEscape]="false">
-            <div class="container">
-                <div class="logo-cont">
-                    <img src="../../../../assets/Imaginnovate-New-Logo.png" alt="">
-                </div>
-                <div class="nav-list-cont">
-                    <ul>
-                        <li routerLink="/dashboard/dpe" routerLinkActive="active">DPE</li>
-                        <li routerLink="/dashboard/pgt" routerLinkActive="active">PGT</li>
-                        <li routerLink="/dashboard/stack-enable" routerLinkActive="active">Stack Enable</li>
-                        <li routerLink="/dashboard/seamless-assist" routerLinkActive="active">Seamless Assist</li>
-                    </ul>
-                </div>
-    
-            </div>
-    
-        </p-sidebar>
-    </div>
-    <div class="content-cont">
-        <router-outlet></router-outlet>
-    </div>
+  <div class="topPanel">
+    <p-sidebar
+      [(visible)]="showNavBar"
+      position="top"
+      [styleClass]="'navStyle'"
+      [showCloseIcon]="false"
+      [closeOnEscape]="false"
+      [dismissible]="false"
+    >
+      <div class="container">
+        <div class="logo-cont">
+          <img src="../../../../assets/Imaginnovate-New-Logo.png" alt="" />
+        </div>
+        <div class="nav-list-cont">
+          <ul>
+            <li routerLink="/dashboard/dpe" routerLinkActive="active">
+              {{ "DPE" | translate }}
+            </li>
+            <li routerLink="/dashboard/pgt" routerLinkActive="active">
+              {{ "PGT" | translate }}
+            </li>
+            <li routerLink="/dashboard/stack-enable" routerLinkActive="active">
+              {{ "STACK_ENABLE" | translate }}
+            </li>
+            <li
+              routerLink="/dashboard/seamless-assist"
+              routerLinkActive="active"
+            >
+              {{ "SEAMLESS_ASSIST" | translate }}
+            </li>
+          </ul>
+        </div>
 
-    <div class="voice-bot-container">
-        <img src="../../../../assets/chatbot_img.svg" *ngIf="!showVoiceBotChat" (click)="enableVoiceBotChat()" alt="voiceBot">
-        <app-voicebot *ngIf="showVoiceBotChat" (closeVoiceBot)="closeVoiceBotchat()" ></app-voicebot>
-    </div>
+        <div class="lang-cont">
+          <select name="lang" (change)="onChangeLang($event)" id="lang">
+            <option [selected]="selectedLang === 'en'" value="en">
+              English
+            </option>
+            <option [selected]="selectedLang === 'fr'" value="fr">
+              French
+            </option>
+            <option [selected]="selectedLang === 'es'" value="es">
+              Spanish
+            </option>
+          </select>
+        </div>
+        <!-- <div id="google_translate_element"></div> -->
+      </div>
+    </p-sidebar>
+  </div>
+  <div class="content-cont">
+    <router-outlet></router-outlet>
+  </div>
 
-
+  <div class="voice-bot-container">
+    <img
+      src="../../../../assets/chatbot_img.svg"
+      *ngIf="!showVoiceBotChat"
+      (click)="enableVoiceBotChat()"
+      alt="voiceBot"
+    />
+    <app-voicebot
+      *ngIf="showVoiceBotChat"
+      (closeVoiceBot)="closeVoiceBotchat()"
+    ></app-voicebot>
+  </div>
 </div>

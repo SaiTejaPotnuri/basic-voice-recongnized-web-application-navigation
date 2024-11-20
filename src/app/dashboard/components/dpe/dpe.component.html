@@ -1,4 +1,10 @@
-
 <div class="container">
-    <img src="../../../../assets/dpeLogo.png" alt="DPE">
+  <img src="../../../../assets/dpeLogo.png" alt="DPE" />
+  <button (click)="openModal()">Open Modal</button>
+  <button (click)="openDialogwithIframe()">Open dialog</button>
+
+  <app-iframe-model
+    [isVisible]="isModalVisible"
+    (closeModal)="closeModal()"
+  ></app-iframe-model>
 </div>

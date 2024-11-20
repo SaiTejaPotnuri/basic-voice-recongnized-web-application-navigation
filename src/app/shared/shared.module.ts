@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrimengModule } from './prime-ui/primeng/primeng.module';
+import { DialogService } from 'primeng/dynamicdialog';
 
 
 
@@ -9,6 +10,8 @@ import { PrimengModule } from './prime-ui/primeng/primeng.module';
   imports: [
     CommonModule
   ],
-  exports: [PrimengModule]
+  exports: [PrimengModule],
+  providers: [DialogService],
+
 })
 export class SharedModule { }

@@ -10,9 +10,10 @@ import { StackEnableComponent } from './components/stack-enable/stack-enable.com
 import { SharedModule } from '../shared/shared.module';
 import { VoicebotComponent } from './components/voicebot/voicebot.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { IframeModelComponent } from './components/iframe-model/iframe-model.component';
 
 @NgModule({
-  declarations: [HomeDashboardComponent, DPEComponent, PGTComponent, SeamlessAssistComponent, StackEnableComponent, VoicebotComponent],
+  declarations: [HomeDashboardComponent, DPEComponent, PGTComponent, SeamlessAssistComponent, StackEnableComponent, VoicebotComponent, IframeModelComponent],
   imports: [CommonModule, DashboardRoutingModule,SharedModule,TranslateModule],
 })
 export class DashboardModule {}

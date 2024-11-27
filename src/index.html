@@ -10,10 +10,27 @@
 <body>
   <app-root></app-root>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="text/javascript" src="https://stack360-ui-uat-950318003585.us-central1.run.app/static/warehouse-visualizer-sdk.js"></script>
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
     }
     </script>
+<script>
+   const visualizerManager = window.WarehouseVisualizerManager;
+    visualizerManager.initialize({
+        visualizerBASEURL: 'http://localhost:5173',
+        preloadModal: true,
+        userId: 8,
+        modalConfig: {
+            width: '800px',
+            height: '600px',
+            className: 'custom-modal',
+            closeOnEscape: true,
+            closeOnBackdrop: true
+        },
+    });
+</script>
+
 </body>
 </html>

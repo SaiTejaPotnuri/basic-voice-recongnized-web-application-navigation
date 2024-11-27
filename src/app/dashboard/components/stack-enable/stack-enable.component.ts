@@ -11,7 +11,7 @@ export class StackEnableComponent {
   openVisualizer(){
     const visualizerManager: any = (window as any).WarehouseVisualizerManager;
     const warehouseId = "AFTW";
-    const locationId = "bin_4";
+    const locationId = "Bin_3";
     visualizerManager.addWarehouse(warehouseId);
     visualizerManager.showLocation({
         locationId: locationId,

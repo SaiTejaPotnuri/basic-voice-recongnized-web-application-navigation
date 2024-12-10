@@ -35,7 +35,7 @@ import { ConfirmationService } from 'primeng/api';
       },
     }),
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: isDevMode(),
+      enabled: true,
       registrationStrategy: 'registerWhenStable:30000'
     }),
   ],

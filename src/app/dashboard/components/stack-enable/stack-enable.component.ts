@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./stack-enable.component.scss']
 })
 export class StackEnableComponent {
+  
+
+  openVisualizer(){
+    const visualizerManager: any = (window as any).WarehouseVisualizerManager;
+    const warehouseId = "AFTW";
+    const locationId = "Bin_3";
+    visualizerManager.addWarehouse(warehouseId);
+    visualizerManager.showLocation({
+        locationId: locationId,
+        warehouseId: warehouseId,
+        modal: true
+    });
+  }
 
 }

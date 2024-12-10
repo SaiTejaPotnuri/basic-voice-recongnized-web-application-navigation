@@ -57,7 +57,16 @@
                 "maximumError": "15kb"
               }
             ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
+              "extractLicenses": true,
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot":true
+          
+
             },
             "development": {
               "buildOptimizer": false,

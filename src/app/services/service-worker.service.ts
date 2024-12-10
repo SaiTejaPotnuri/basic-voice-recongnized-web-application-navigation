@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
 import { SwUpdate, VersionEvent } from '@angular/service-worker';
-import { ConfirmationService } from 'primeng/api';
 import { interval } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceWorkerService {
-  private readonly UPDATE_CHECK_INTERVAL = 15 * 60 * 1000; // 15 minutes
-  private readonly RETRY_INTERVAL = 5 * 60 * 1000; // 5 minutes
+  private readonly UPDATE_CHECK_INTERVAL = 10 * 1000; // 10 seconds
+  private readonly RETRY_INTERVAL = 5 * 1000; // 5 seconds
 
   constructor(
     private swUpdate: SwUpdate,
-    private confirmationService: ConfirmationService
   ) {
+    console.log('Service Worker Enabled:', this.swUpdate.isEnabled);
     this.initializeServiceWorkerUpdates();
   }
 
   private initializeServiceWorkerUpdates() {
     // Check if service workers are supported
+
     if (!this.swUpdate.isEnabled) {
-      console.log('Service Workers are not supported');
+      console.warn('Service Workers are not supported. This can happen if:');
       return;
     }
 
@@ -74,37 +74,35 @@ export class ServiceWorkerService {
   }
 
   private handleUpdateAvailable() {
-    this.confirmationService.confirm({
-      message: 'A new version of the application is available. Would you like to update?',
-      header: 'Update Available',
-      icon: 'pi pi-exclamation-triangle',
-      acceptLabel: 'Update',
-      rejectLabel: 'Cancel',
-      accept: () => {
-        this.promptUserToUpdate();
-      }
-    });
+    const yes = prompt("update to new version");
+    if (yes) {
+      this.swUpdate.activateUpdate().then(() => {
+        console.log('Update activated, reloading application');
+        window.location.reload();
+      }).catch(err => {
+        console.error('Failed to activate update', err);
+      });
+    }
   }
 
   private handleUpdateReady() {
-    this.confirmationService.confirm({
-      message: 'A new version is ready. Reload to update?',
-      header: 'Update Ready',
-      icon: 'pi pi-info-circle',
-      acceptLabel: 'Reload',
-      rejectLabel: 'Later',
-      accept: () => {
-        this.promptUserToUpdate();
-      }
-    });
+    const yes = prompt("update to new version");
+    if (yes) {
+      this.swUpdate.activateUpdate().then(() => {
+        console.log('Update activated, reloading application');
+        window.location.reload();
+      }).catch(err => {
+        console.error('Failed to activate update', err);
+      });
+    }
   }
 
-  private promptUserToUpdate() {
-    this.swUpdate.activateUpdate().then(() => {
-      console.log('Update activated, reloading application');
-      window.location.reload();
-    }).catch(err => {
-      console.error('Failed to activate update', err);
-    });
-  }
+  // private promptUserToUpdate() {
+  //   this.swUpdate.activateUpdate().then(() => {
+  //     console.log('Update activated, reloading application');
+  //     window.location.reload();
+  //   }).catch(err => {
+  //     console.error('Failed to activate update', err);
+  //   });
+  // }
 }

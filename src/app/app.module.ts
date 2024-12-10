@@ -14,7 +14,6 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ServiceWorkerService } from './services/service-worker.service';
-import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,7 +38,7 @@ import { ConfirmationService } from 'primeng/api';
       registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
-  providers: [HttpClient,ServiceWorkerService,ConfirmationService],
+  providers: [HttpClient,ServiceWorkerService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

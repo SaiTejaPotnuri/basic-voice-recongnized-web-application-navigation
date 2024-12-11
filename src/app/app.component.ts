@@ -11,12 +11,16 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent {
   title = 'voice-recognization-angular';
 
-  constructor(private translateService: TranslateService,private serviceWorker: ServiceWorkerService,private primengConfig :PrimeNGConfig) {
+  constructor(private translateService: TranslateService,public serviceWorker: ServiceWorkerService,private primengConfig :PrimeNGConfig) {
       this.translateService.setDefaultLang('en');
       this.translateService.use(localStorage.getItem('langInfo') || 'en');
       this.primengConfig.ripple = true;
 
    }
 
+
+   closeNotification(){
+    this.serviceWorker.newVersionAvailable = false
+   }
 
 }

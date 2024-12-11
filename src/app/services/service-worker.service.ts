@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { SwUpdate, VersionEvent } from '@angular/service-worker';
 import { interval } from 'rxjs';
 
@@ -6,8 +7,9 @@ import { interval } from 'rxjs';
   providedIn: 'root'
 })
 export class ServiceWorkerService {
-  private readonly UPDATE_CHECK_INTERVAL = 10 * 1000; // 10 seconds
+  private readonly UPDATE_CHECK_INTERVAL = 10 * 1000; // 10 seconds 
   private readonly RETRY_INTERVAL = 5 * 1000; // 5 seconds
+  newVersionAvailable = false;
 
   constructor(
     private swUpdate: SwUpdate,
@@ -18,9 +20,8 @@ export class ServiceWorkerService {
 
   private initializeServiceWorkerUpdates() {
     // Check if service workers are supported
-
     if (!this.swUpdate.isEnabled) {
-      console.warn('Service Workers are not supported. This can happen if:');
+      console.warn('Service Workers are not supported in this environment');
       return;
     }
 
@@ -38,7 +39,7 @@ export class ServiceWorkerService {
     this.swUpdate.checkForUpdate().then((updateAvailable) => {
       console.log('Update check completed', updateAvailable);
       if (updateAvailable) {
-        this.handleUpdateAvailable();
+        // this.handleUpdateAvailable();
       }
     }).catch(err => {
       console.error('Error checking for updates', err);
@@ -60,7 +61,7 @@ export class ServiceWorkerService {
       switch (event.type) {
         case 'VERSION_DETECTED':
           console.log('New version detected');
-          this.handleUpdateAvailable();
+          // this.handleUpdateAvailable();
           break;
         case 'VERSION_READY':
           console.log('New version ready to activate');
@@ -74,35 +75,25 @@ export class ServiceWorkerService {
   }
 
   private handleUpdateAvailable() {
-    const yes = prompt("update to new version");
-    if (yes) {
-      this.swUpdate.activateUpdate().then(() => {
-        console.log('Update activated, reloading application');
-        window.location.reload();
-      }).catch(err => {
-        console.error('Failed to activate update', err);
-      });
-    }
+    // Use a less intrusive update notification
+    this.newVersionAvailable = true;
+
+    
   }
 
   private handleUpdateReady() {
-    const yes = prompt("update to new version");
-    if (yes) {
-      this.swUpdate.activateUpdate().then(() => {
-        console.log('Update activated, reloading application');
-        window.location.reload();
-      }).catch(err => {
-        console.error('Failed to activate update', err);
-      });
-    }
+    // if (confirm('A new version is ready. Do you want to update now?')) {
+    //   this.activateUpdate();
+    // }
+    this.newVersionAvailable = true;
   }
 
-  // private promptUserToUpdate() {
-  //   this.swUpdate.activateUpdate().then(() => {
-  //     console.log('Update activated, reloading application');
-  //     window.location.reload();
-  //   }).catch(err => {
-  //     console.error('Failed to activate update', err);
-  //   });
-  // }
+  public activateUpdate() {
+    this.swUpdate.activateUpdate().then(() => {
+      console.log('Update activated, reloading application');
+      window.location.reload();
+    }).catch(err => {
+      console.error('Failed to activate update', err);
+    });
+  }
 }

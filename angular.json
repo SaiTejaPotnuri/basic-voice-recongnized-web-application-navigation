@@ -39,15 +39,7 @@
               "node_modules/primeflex/primeflex.css",
               "node_modules/primeicons/primeicons.css"
             ],
-            "scripts": [],
-            "outputHashing": "all",
-            "buildOptimizer": true,
-            "optimization": true,
-            "vendorChunk": false,
-            "extractLicenses": true,
-            "sourceMap": false,
-            "namedChunks": false,
-            "aot":true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -77,14 +69,12 @@
 
             },
             "development": {
-              "outputHashing": "all",
-              "buildOptimizer": true,
-              "optimization": true,
-              "vendorChunk": false,
-              "extractLicenses": true,
-              "sourceMap": false,
-              "namedChunks": false,
-              "aot":true
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
           },
           "defaultConfiguration": "production"

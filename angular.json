@@ -45,6 +45,7 @@
             "production": {
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json",
+              "baseHref": "/basic-voice-recongnized-web-application-navigation/",
               "budgets": [
               {
                 "type": "initial",
@@ -87,6 +88,7 @@
           "configurations": {
             "production": {
               "browserTarget": "voice-recognization-angular:build:production"
+
             },
             "development": {
               "browserTarget": "voice-recognization-angular:build:development"

@@ -38,7 +38,8 @@ export class ServiceWorkerService {
     this.swUpdate.checkForUpdate().then((updateAvailable) => {
       console.log('Update check completed', updateAvailable);
       if (updateAvailable) {
-        // this.handleUpdateAvailable();
+        this.handleUpdateAvailable();
+        // listenForVersionUpdates();
       }
     }).catch(err => {
       console.error('Error checking for updates', err);

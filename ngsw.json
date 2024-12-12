@@ -1,0 +1,115 @@
+{
+  "configVersion": 1,
+  "timestamp": 1733993969386,
+  "index": "/basic-voice-recongnized-web-application-navigation/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-128x128.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-144x144.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-152x152.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-192x192.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-384x384.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-512x512.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-72x72.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-96x96.png",
+        "/basic-voice-recongnized-web-application-navigation/favicon.ico",
+        "/basic-voice-recongnized-web-application-navigation/index.html",
+        "/basic-voice-recongnized-web-application-navigation/main.6cd5b0f9d33537ed.js",
+        "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest",
+        "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js",
+        "/basic-voice-recongnized-web-application-navigation/runtime.78b3553c30a96ce7.js",
+        "/basic-voice-recongnized-web-application-navigation/styles.e857c2341df90d0b.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/basic-voice-recongnized-web-application-navigation/assets/Imaginnovate-New-Logo.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/PGTservices-logo-header.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/chat-bot-full.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/chatbot_img.svg",
+        "/basic-voice-recongnized-web-application-navigation/assets/dpeLogo.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/i18n/en.json",
+        "/basic-voice-recongnized-web-application-navigation/assets/i18n/es.json",
+        "/basic-voice-recongnized-web-application-navigation/assets/i18n/fr.json",
+        "/basic-voice-recongnized-web-application-navigation/assets/logoSeamlessAI.png",
+        "/basic-voice-recongnized-web-application-navigation/assets/mic.svg",
+        "/basic-voice-recongnized-web-application-navigation/assets/stack-enable.png",
+        "/basic-voice-recongnized-web-application-navigation/color.dae87a04d07ca92b.png",
+        "/basic-voice-recongnized-web-application-navigation/hue.8b1818380241e6ac.png",
+        "/basic-voice-recongnized-web-application-navigation/primeicons.19e14e488f5edc90.svg",
+        "/basic-voice-recongnized-web-application-navigation/primeicons.310a7310efb91ab1.ttf",
+        "/basic-voice-recongnized-web-application-navigation/primeicons.7f7722745590608a.woff",
+        "/basic-voice-recongnized-web-application-navigation/primeicons.e1a53edb6ea00325.woff2"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/basic-voice-recongnized-web-application-navigation/assets/Imaginnovate-New-Logo.png": "55e30c66599046dd0a73c34e1a468310d78c34aa",
+    "/basic-voice-recongnized-web-application-navigation/assets/PGTservices-logo-header.png": "9999835966158559b289326aab876282889963ff",
+    "/basic-voice-recongnized-web-application-navigation/assets/chat-bot-full.png": "9f9b91fbfe38114a8e3e655e65709ae39c781f32",
+    "/basic-voice-recongnized-web-application-navigation/assets/chatbot_img.svg": "3fc852e21f5ea9f1413317549ec964a6cd29a7c6",
+    "/basic-voice-recongnized-web-application-navigation/assets/dpeLogo.png": "bfa071a19bbfb32cb341411ea4c82605bf4f317d",
+    "/basic-voice-recongnized-web-application-navigation/assets/i18n/en.json": "3504b2c25b279183e8f409167838198a159d8e99",
+    "/basic-voice-recongnized-web-application-navigation/assets/i18n/es.json": "de1a361c685cdfe5b193b3d3cb20fd8050f7036e",
+    "/basic-voice-recongnized-web-application-navigation/assets/i18n/fr.json": "feadf2563fa4929eed2a14ef27ee286d20d1f569",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/basic-voice-recongnized-web-application-navigation/assets/logoSeamlessAI.png": "51f76e2bf2b8e697dce59550149870434c9d6a30",
+    "/basic-voice-recongnized-web-application-navigation/assets/mic.svg": "75b29c3aa0caa15e89bce1c2535f9220bdec061d",
+    "/basic-voice-recongnized-web-application-navigation/assets/stack-enable.png": "ed15b10c924eef71968557f197dc4c240d6e7eb0",
+    "/basic-voice-recongnized-web-application-navigation/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
+    "/basic-voice-recongnized-web-application-navigation/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/basic-voice-recongnized-web-application-navigation/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
+    "/basic-voice-recongnized-web-application-navigation/index.html": "ca10eb7ffef0567e3ef9eb0bd2b96ccbb7d732b8",
+    "/basic-voice-recongnized-web-application-navigation/main.6cd5b0f9d33537ed.js": "8acfb9d15fdbaff5c897d36967a4c66842e41541",
+    "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest": "3995d337fde7ac560330e0f9abc6b4b7328d60b2",
+    "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js": "5cec7e4ae7dad3e08fd8378eb5a3c97902e0eb9b",
+    "/basic-voice-recongnized-web-application-navigation/primeicons.19e14e488f5edc90.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",
+    "/basic-voice-recongnized-web-application-navigation/primeicons.310a7310efb91ab1.ttf": "3b878ca7e88945a8ec25814810b95367d8977ae6",
+    "/basic-voice-recongnized-web-application-navigation/primeicons.7f7722745590608a.woff": "361e3af71bb4e515feead2f787348a92a5527158",
+    "/basic-voice-recongnized-web-application-navigation/primeicons.e1a53edb6ea00325.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
+    "/basic-voice-recongnized-web-application-navigation/runtime.78b3553c30a96ce7.js": "e9eb476094d9ad7c9b7f861c1e36d9ac0890f834",
+    "/basic-voice-recongnized-web-application-navigation/styles.e857c2341df90d0b.css": "9f91fae391c15afc74ca5bb0eb245eceb6fe1b8b"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "freshness"
+}

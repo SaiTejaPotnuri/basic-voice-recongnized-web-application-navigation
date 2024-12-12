@@ -3,16 +3,16 @@ import { SwUpdate, VersionEvent } from '@angular/service-worker';
 import { interval } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
+/*When checkForUpdates is called, it triggers the service worker to check for updates, and if an update is found, it will emit a VersionEvent that is caught by the versionUpdates Observable.
+ then version update listener is called */
 export class ServiceWorkerService {
-  private readonly UPDATE_CHECK_INTERVAL = 10 * 1000; // 10 seconds 
+  private readonly UPDATE_CHECK_INTERVAL = 10 * 1000; // 10 seconds
   private readonly RETRY_INTERVAL = 5 * 1000; // 5 seconds
   newVersionAvailable = false;
 
-  constructor(
-    private swUpdate: SwUpdate,
-  ) {
+  constructor(private swUpdate: SwUpdate) {
     console.log('Service Worker Enabled:', this.swUpdate.isEnabled);
     this.initializeServiceWorkerUpdates();
   }
@@ -35,65 +35,63 @@ export class ServiceWorkerService {
   }
 
   private checkForUpdates() {
-    this.swUpdate.checkForUpdate().then((updateAvailable) => {
-      console.log('Update check completed', updateAvailable);
-      if (updateAvailable) {
-        this.handleUpdateAvailable();
-        // listenForVersionUpdates();
-      }
-    }).catch(err => {
-      console.error('Error checking for updates', err);
-      // Schedule a retry if update check fails
-      setTimeout(() => this.checkForUpdates(), this.RETRY_INTERVAL);
-    });
+    this.swUpdate
+      .checkForUpdate()
+      .then((updateAvailable) => {
+        console.log('Update is available', updateAvailable);
+        if (updateAvailable) {
+          this.newVersionAvailable = true;
+        }
+      })
+      .catch((err) => {
+        console.error('Error checking for updates', err);
+        // Schedule a retry if update check fails
+        setTimeout(() => this.checkForUpdates(), this.RETRY_INTERVAL);
+      });
   }
 
   private setupPeriodicUpdateChecks() {
     interval(this.UPDATE_CHECK_INTERVAL).subscribe(() => {
+      console.log('Checking for updates periodically...');
       this.checkForUpdates();
     });
   }
 
   private listenForVersionUpdates() {
-    this.swUpdate.versionUpdates.subscribe((event: VersionEvent) => {
-      console.log('Version update event', event);
+    this.swUpdate.versionUpdates.subscribe(
+      (event: VersionEvent) => {
+        console.log('Version update event:', event);
 
-      switch (event.type) {
-        case 'VERSION_DETECTED':
-          console.log('New version detected');
-          // this.handleUpdateAvailable();
-          break;
-        case 'VERSION_READY':
-          console.log('New version ready to activate');
-          this.handleUpdateReady();
-          break;
-        case 'VERSION_INSTALLATION_FAILED':
-          console.error('Version installation failed', event.error);
-          break;
+        switch (event.type) {
+          case 'VERSION_DETECTED':
+            console.log('New version detected');
+            break;
+          case 'VERSION_READY':
+            console.log('New version ready to activate');
+            this.newVersionAvailable = true;
+            break;
+          case 'VERSION_INSTALLATION_FAILED':
+            console.error('Version installation failed', event.error);
+            break;
+          default:
+            console.log('Unknown version event', event);
+        }
+      },
+      (error) => {
+        console.error('Error in version updates listener:', error);
       }
-    });
-  }
-
-  private handleUpdateAvailable() {
-    // Use a less intrusive update notification
-    this.newVersionAvailable = true;
-
-    
-  }
-
-  private handleUpdateReady() {
-    // if (confirm('A new version is ready. Do you want to update now?')) {
-    //   this.activateUpdate();
-    // }
-    this.newVersionAvailable = true;
+    );
   }
 
   public activateUpdate() {
-    this.swUpdate.activateUpdate().then(() => {
-      console.log('Update activated, reloading application');
-      window.location.reload();
-    }).catch(err => {
-      console.error('Failed to activate update', err);
-    });
+    this.swUpdate
+      .activateUpdate()
+      .then(() => {
+        console.log('Update activated, reloading application');
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.error('Failed to activate update', err);
+      });
   }
 }

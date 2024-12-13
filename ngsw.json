@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1734085149575,
+  "timestamp": 1734085331699,
   "index": "/basic-voice-recongnized-web-application-navigation/index.html",
   "assetGroups": [
     {
@@ -21,7 +21,7 @@
         "/basic-voice-recongnized-web-application-navigation/assets/icons/icon-96x96.png",
         "/basic-voice-recongnized-web-application-navigation/favicon.ico",
         "/basic-voice-recongnized-web-application-navigation/index.html",
-        "/basic-voice-recongnized-web-application-navigation/main.923722c0c5449b40.js",
+        "/basic-voice-recongnized-web-application-navigation/main.20be65bbb7d10269.js",
         "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest",
         "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js",
         "/basic-voice-recongnized-web-application-navigation/runtime.78b3553c30a96ce7.js",
@@ -82,8 +82,8 @@
     "/basic-voice-recongnized-web-application-navigation/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
     "/basic-voice-recongnized-web-application-navigation/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/basic-voice-recongnized-web-application-navigation/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "/basic-voice-recongnized-web-application-navigation/index.html": "65572a98609cae790fb55bba809ffcd997665af2",
-    "/basic-voice-recongnized-web-application-navigation/main.923722c0c5449b40.js": "f67584271dae35c2f0e9437569d7f9e9f1cd7ac8",
+    "/basic-voice-recongnized-web-application-navigation/index.html": "52ac9ddeaa4efdd5b0c36c78643eabdf1e3a7e68",
+    "/basic-voice-recongnized-web-application-navigation/main.20be65bbb7d10269.js": "76d5b25a85fd6b5c406b9f4761a52dbb5030ffdf",
     "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest": "3995d337fde7ac560330e0f9abc6b4b7328d60b2",
     "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js": "5cec7e4ae7dad3e08fd8378eb5a3c97902e0eb9b",
     "/basic-voice-recongnized-web-application-navigation/primeicons.19e14e488f5edc90.svg": "a07ae39027c1a780b42fd82fad7575c2924d9d28",

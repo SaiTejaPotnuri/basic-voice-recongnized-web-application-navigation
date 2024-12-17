@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1734427259244,
+  "timestamp": 1734429750135,
   "index": "/basic-voice-recongnized-web-application-navigation/index.html",
   "assetGroups": [
     {
@@ -25,7 +25,7 @@
         "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest",
         "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js",
         "/basic-voice-recongnized-web-application-navigation/runtime.78b3553c30a96ce7.js",
-        "/basic-voice-recongnized-web-application-navigation/styles.0362b0cdca432f22.css"
+        "/basic-voice-recongnized-web-application-navigation/styles.970f7db6385b72c0.css"
       ],
       "patterns": []
     },
@@ -82,7 +82,7 @@
     "/basic-voice-recongnized-web-application-navigation/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
     "/basic-voice-recongnized-web-application-navigation/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "/basic-voice-recongnized-web-application-navigation/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "/basic-voice-recongnized-web-application-navigation/index.html": "95c3d98ce0376134fd22ecf9f3aeeb63466d16c6",
+    "/basic-voice-recongnized-web-application-navigation/index.html": "825880f4eb81130bfec3fe07249a409326f127e8",
     "/basic-voice-recongnized-web-application-navigation/main.f4e01b940b52675f.js": "1f97d35dfb520def1e2bc800b727bafd35c5d54a",
     "/basic-voice-recongnized-web-application-navigation/manifest.webmanifest": "3995d337fde7ac560330e0f9abc6b4b7328d60b2",
     "/basic-voice-recongnized-web-application-navigation/polyfills.dc4708537c8a7d70.js": "5cec7e4ae7dad3e08fd8378eb5a3c97902e0eb9b",
@@ -91,7 +91,7 @@
     "/basic-voice-recongnized-web-application-navigation/primeicons.7f7722745590608a.woff": "361e3af71bb4e515feead2f787348a92a5527158",
     "/basic-voice-recongnized-web-application-navigation/primeicons.e1a53edb6ea00325.woff2": "837c1279b6af9d297f34fdb43e6fcc9206a79f32",
     "/basic-voice-recongnized-web-application-navigation/runtime.78b3553c30a96ce7.js": "e9eb476094d9ad7c9b7f861c1e36d9ac0890f834",
-    "/basic-voice-recongnized-web-application-navigation/styles.0362b0cdca432f22.css": "35f7a775ad9031d1fe296a2697fd0a3b4745d6a0"
+    "/basic-voice-recongnized-web-application-navigation/styles.970f7db6385b72c0.css": "ef8074171eba07bfcf0b267c9d0c8e7580b6bd65"
   },
   "navigationUrls": [
     {

@@ -35,6 +35,7 @@ export class ServiceWorkerService {
   }
 
   private checkForUpdates() {
+    console.log('Checking for updates...');
     this.swUpdate
       .checkForUpdate()
       .then((updateAvailable) => {

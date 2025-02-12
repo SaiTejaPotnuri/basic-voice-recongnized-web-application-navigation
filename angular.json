@@ -24,7 +24,7 @@
           "options": {
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",
-            "outputPath": "docs",
+            "outputPath": "dist/voice-recognization-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

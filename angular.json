@@ -24,7 +24,7 @@
           "options": {
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json",
-            "outputPath": "dist",
+            "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
